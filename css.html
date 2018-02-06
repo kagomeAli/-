@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta  content="标题">
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <style>
+        option:checked {
+            color: red;
+            background-color: cadetblue;
+        }
+        input:checked {
+            background: red;
+            color: red;
+        }
+        select{
+            margin: 30px;
+        }
+        .line{
+            border-bottom: 1px solid #000;
+            margin: 20px;
+        }
+        .floatBox{
+            overflow: hidden;
+            width: 100%;
+            border: 1px solid #333;
+        }
+        .floatBox .dd{
+            clear: both;
+        }
+        .floatBox .aa{
+            content: '你喜欢我';
+            float: left;
+            height: 30px;
+            width:30px;
+            background-color: red;
+        }
+        .floatBox .bb{
+            height: 30px;
+            width:30px;
+            overflow: hidden;
+            background-color: cadetblue;
+        }
+        .floatBox .cc{
+            float: left;
+            height: 30px;
+            width:30px;
+            background-color: lightyellow;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h3>
+            伪类选择器:checked将作用与input类型为radio或者checkbox, 不会作用于option？
+        </h3>
+        <select>
+            <option>Volvo</option>
+            <option selected="selected">Saab</option>
+            <option>Mercedes</option>
+            <option>Audi</option>
+        </select>
+        <br>
+        <br>
+        <input type="radio" name="sex" value="male" checked>Male
+        <br>
+        <input type="radio" name="sex" value="female">Female
+        <div class="line"></div>
+        <h3>BFC</h3>
+        <div class="floatBox">
+            <div class="aa">AA</div>
+            <div class="bb">BB</div>
+            <div class="cc">CC</div>
+            <!--<div class="dd"></div>-->
+        </div>
+        <div class="line"></div>
+        开启电话功能
+        <a href="tel:123456">123456</a>
+        开启短信功能：
+        <a href="sms:123456">123456</a>
+    </div>
+</body>
+</html>
