@@ -92,6 +92,112 @@ btn.addEventListener("click",function(){
 @media 设备名 only （选取条件） not （选取条件） and（设备选取条件），设备二{sRules}。
 
 
+#
+
+## this的绑定规则
+**1.默认绑定**
+独立函数调用时，this指向全局函数
+
+```
+function foo() {
+ console.log(this.a);
+}
+var a = 2;
+foo(); // 2
+```
+`2.隐式绑定`
+当函数引用有上下文对象时，，隐式绑定规则会把函数调用中的this绑定到这个上下文对象
+
+```
+function foo() {
+ console.log( this.a);
+}
+var obj = {
+ a: 2,
+ foo: foo
+};
+obj.foo(); // 2
+
+```
+对象属性引用链中只有最顶层或者说最后一层会影响调用位置
+obj1.obj2.foo(); // foo 中的 this 与 obj2 绑定
+
+
+隐式丢失
+指的是函数中的this丢失绑定对象，引用默认绑定规则，从而将this绑定到全局对象或者undefined上
+
+```
+function foo() {
+ console.log( this.a);
+}
+var obj = {
+ a: 2,
+ foo: foo
+};
+var bar = obj.foo; //函数别名
+var a = "这是全局变量喔";
+bar(); // "这是全局变量喔"
+```
+
+**3.显示绑定**
+显示绑定的核心是javascript内置的call和apply方法，
+```
+function foo() {
+ console.log( this.a);
+}
+var obj = {
+ a: 2
+};
+foo.call(obj); // 2
+
+```
+如果call或者apply传入的第一个参数是原始值（字符串类型、布尔类型、数字类型），那么该原始值会被转换成它的对象形式（new String（）、new Boolean()、new Number（）），俗称：“装箱”
+
+
+4.new 绑定
+使用 new 来调用函数时，会自动执行下面的操作：
+     1、创建一个全新的对象
+     2、这个新对象会被执行 [[原型]] 连接
+     3、这个新对象会绑定到函数调用的 this
+     4、如果函数没有返回其他对象，那么 new 表达式中的函数调用会自动返回这个新对象
+
+
+```
+function foo() {
+ this.a = a;
+}
+var bar = new foo(2);
+console.log(bar.a); // 2
+```
+
+
+**优先级：**
+1.函数是否在new中调用（new 绑定）？如果是的话this绑定的是新创建的对象
+var bar = new foo（）
+
+2.函数是否通过call、apply（显示绑定）？this绑定的是指定对象
+var bar = foo.call(obj2);
+
+3.函数是否在某个上下文对象中调用（隐式绑定），this绑定的是相应的上下文对象
+var bar = obj1.foo();
+
+3.如果都不是的话。使用默认绑定，如果在严格模式下，就绑定到undefined。否则绑定到全局对象
+var bar = foo();
+
+
+**绑定例外：**
+如果把null或者undefined作为this的绑定对象传入call、apply、bind，那么这些值在调用时会被忽略，实际应用的是默认绑定规则
+```
+function foo() {
+ console.log( this.a);
+}
+var a = 2；
+var o = {a: 3, foo: foo};
+var p = {a: 4};
+o.foo(); // 3
+(p.foo = o.foo)(); // 2
+```
+
 
 
 
