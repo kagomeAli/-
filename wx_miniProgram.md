@@ -1,6 +1,8 @@
 # wepy  的深入理解
 
 [小程序的概述](https://mp.weixin.qq.com/s/9PID6UJsQyB06xdyOkEVOA)
+
+[wepy的优化](https://zhuanlan.zhihu.com/p/24176267)
 #
 
 
