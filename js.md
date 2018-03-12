@@ -202,7 +202,10 @@ o.foo(); // 3
 (p.foo = o.foo)(); // 2
 ```
 
+#
 
+# 面向对象有三大特性：封装、继承、多态
+[JS面向对象](https://www.cnblogs.com/pompey/p/6675559.html)
 
 
 
