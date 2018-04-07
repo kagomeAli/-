@@ -63,7 +63,7 @@ WePY选择使用脏检查去做数据优化，只会在流程最后做一次脏�
 
 
 
-#  wepy如何实现单文件组件wepy组件.wpy编译
+# wepy如何实现单文件组件wepy组件.wpy编译
 wepy框架通过wepy-cli对.wpy编译，拆解为style、script、template，再分别处理，生成到dist文件对应的xxx.wxss、xxx.wxml......
 
 # 如何隔离组件作用域
