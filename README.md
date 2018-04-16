@@ -7,3 +7,5 @@
 ### [4、关于css3中linear-gradient中的百分比](https://www.jianshu.com/p/bf862535dd30)
 
 ### [5、CSS弹性盒模型flexbox](http://caibaojian.com/flexbox-guide.html)
+
+### [6、CSS3 Transitions, Transforms和Animation使用简介与应用展示CSS弹性盒模型flexbox](http://www.zhangxinxu.com/wordpress/2010/11/css3-transitions-transforms-animation-introduction/)
