@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #content {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 240px;
+            width: 70%;
+        }
+        section{
+            width: 600px;
+        }
+        h3{
+            text-align: center;
+        }
+        .justifyBox{
+            height: 600px;
+            width: 600px;
+            border: 1px solid #333;
+        }
+        .cell{
+            display: table;
+        }
+        .table-cell{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .absoluted{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .relative{
+            position: relative;
+        }
+        .flexOne{
+            display: flex;
+            align-items: center;
+        }
+        .flexTwo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h3>table-cell 实现垂直居中</h3>
+    <div class="justifyBox cell">
+        <div class="table-cell">
+            Content goes here
+            Content goes here
+            Content goes hereContent goes hereContent goes here
+            Content goes here
+            Content goes here
+            Content goes hereContent goes hereContent goes hereContent goes here
+            Content goes here
+            Content goes hereContent goes hereContent goes here
+        </div>
+    </div>
+</section>
+<section>
+    <h3>绝对定位 实现垂直居中</h3>
+    <div class="justifyBox relative">
+        <div class="absoluted">
+            Content goes here
+            Content goes here
+            Content goes hereContent goes hereContent goes here
+            Content goes here
+            Content goes here
+            Content goes hereContent goes hereContent goes hereContent goes here
+            Content goes here
+            Content goes hereContent goes hereContent goes here
+        </div>
+    </div>
+</section>
+<section>
+    <h3>flex 实现垂直居中(1)</h3>
+    <div class="justifyBox flexOne">
+        Content goes here
+        Content goes here
+        Content goes hereContent goes hereContent goes here
+        Content goes here
+        Content goes here
+        Content goes hereContent goes hereContent goes hereContent goes here
+        Content goes here
+        Content goes hereContent goes hereContent goes here
+    </div>
+</section>
+<section>
+    <h3>flex 实现垂直居中(2)</h3>
+    <div class="justifyBox flexTwo">
+        Content goes here
+        Content goes here
+        Content goes hereContent goes hereContent goes here
+        Content goes here
+        Content goes here
+        Content goes hereContent goes hereContent goes hereContent goes here
+        Content goes here
+        Content goes hereContent goes hereContent goes here
+    </div>
+</section>
+</body>
+</html>
