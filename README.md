@@ -15,3 +15,5 @@
 ### [8、js new关键字](https://www.cnblogs.com/AaronNotes/p/6529492.html)
 
 ### [9、1px 解决方案](https://www.jianshu.com/p/7e63f5a32636)
+
+### [10、闭包优缺点](https://www.cnblogs.com/qfly/p/7819589.html)

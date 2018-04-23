@@ -108,5 +108,30 @@
         Content goes hereContent goes hereContent goes here
     </div>
 </section>
+<script>
+    function Person () {
+        this.name = 'person'
+        this.fun = function () {
+            console.log(this.name)
+        }
+    }
+    function Child () {
+        this.age = 21
+    }
+    Child.prototype = new Person()
+    function Person1 () {
+        this.name = 'person'
+        this.fun = function () {
+            console.log(this.name)
+        }
+    }
+    Person1.prototype.fun2 = function () {
+        console.log(123)
+    }
+    function Child1 () {
+        this.age = 21
+        Person1.call(this)
+    }
+</script>
 </body>
 </html>
