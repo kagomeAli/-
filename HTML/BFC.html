@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC</title>
+    <style>
+        .foldMargin{
+            width: 100px;
+            height: 100px;
+            background: lightcyan;
+            margin: 100px;
+        }
+        .borderLine{
+            border: 1px solid #000;
+        }
+        .overflowHidden{
+            overflow: hidden;
+        }
+        .floatBox{
+            width:100px;
+            height: 100px;
+            background: deepskyblue;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="foldMargin"></div>
+    <div class="foldMargin"></div>
+    <div class="borderLine overflowHidden">
+        <div class="floatBox">
+            我是一个浮动元素
+        </div>
+        <div class="overflowHidden">
+            我是浮动元素的父级父级的给子集的你，你到底懂不懂父爱如山，给爸爸妈妈打个电话吧孩子
+        </div>
+    </div>
+</body>
+</html>
