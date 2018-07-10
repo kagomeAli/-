@@ -71,7 +71,7 @@ BFC（Block Formatting Contexts）块级格式上下文，输入上述定位方�
 </div>
 
 ```
-![image]https://pic2.zhimg.com/80/v2-371eb702274af831df909b2c55d6a14b_hd.jpg)
+![image](https://pic2.zhimg.com/80/v2-371eb702274af831df909b2c55d6a14b_hd.jpg)
 
 由于容器内元素浮动，脱离了文档流，所以容器只剩下 2px 的边距高度。如果使触发容器的 BFC，那么容器将会包裹着浮动元素。
 ```
